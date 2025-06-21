@@ -11,7 +11,8 @@ RUN apt-get update && apt-get install -y git && apt-get clean
 WORKDIR /app
 
 # Copia todo el contenido
-COPY . .
+RUN git clone https://github.com/benjamin288888/dockerizando-app.git .
+
 
 # Comando para ejecutar script
 CMD ["python", "app.py"]
